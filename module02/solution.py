@@ -35,9 +35,7 @@ PANCAKE_INGREDIENTS = {
 
 def ingredient_exists(ingr, dict):
     """Check if an ingredient exists."""
-    if dict.get(ingr):
-        return True
-    else: return False
+    return ingr in dict.keys()
 
 def fatten_pancakes(dict):
     """Return new recipe with added eggs and butter"""
@@ -72,4 +70,8 @@ def fib_exists(lst, n):
 
 def which_fib(lst, n):
     """Return the position of n in lst counting from 1"""
-    return lst.index(n) + 1
+    for i in range (0, len(lst)):
+        if lst[i] == n:
+            return i+1
+    raise ValueError
+
