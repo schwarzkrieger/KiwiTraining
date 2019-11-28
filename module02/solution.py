@@ -71,7 +71,7 @@ def fib_exists(lst, n):
 
 def which_fib(lst, n):
     """Return the position of n in lst counting from 1"""
-    for i, val in enumerate(lst):
+    for i, val in enumerate(lst, 1):
         if val == n:
-            return i+1
+            return i
     raise ValueError
