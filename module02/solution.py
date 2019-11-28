@@ -1,3 +1,4 @@
+"""solution of tasks"""
 IS_TRUE = True
 IS_FALSE = False
 
@@ -33,26 +34,26 @@ PANCAKE_INGREDIENTS = {
     'salt' : 0.001
     }
 
-def ingredient_exists(ingr, dict):
+def ingredient_exists(ingr, diction):
     """Check if an ingredient exists."""
-    return ingr in dict.keys()
+    return ingr in diction.keys()
 
-def fatten_pancakes(dict):
+def fatten_pancakes(diction):
     """Return new recipe with added eggs and butter"""
-    newdict = dict.copy()
+    newdict = diction.copy()
     newdict['eggs'] = 6
-    newdict ['butter'] = True
+    newdict['butter'] = True
     return newdict
 
-def add_sugar(dict):
+def add_sugar(diction):
     """Return new recipe with added sugar"""
-    newdict = dict.copy()
+    newdict = diction.copy()
     newdict['sugar'] = True
     return newdict
 
-def remove_salt(dict):
+def remove_salt(diction):
     """Remove salt from the recipe"""
-    newdict = dict.copy()
+    newdict = diction.copy()
     if 'salt' in newdict:
         del newdict['salt']
     return newdict
@@ -70,8 +71,7 @@ def fib_exists(lst, n):
 
 def which_fib(lst, n):
     """Return the position of n in lst counting from 1"""
-    for i in range (0, len(lst)):
-        if lst[i] == n:
+    for i, val in enumerate(lst):
+        if val == n:
             return i+1
     raise ValueError
-
