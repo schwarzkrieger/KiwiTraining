@@ -10,13 +10,6 @@ def sum_of_digits(num):
         num //= 10
     return summ
 
-def reverse_list(lst_orig):
-    """Return list in reverse order"""
-    lst_rev = []
-    while lst_orig:
-        lst_rev.append(lst_orig.pop())
-    return lst_rev
-
 def to_digits(num):
     """Return a list of digits of an integer n"""
     num = abs(num)
@@ -24,11 +17,12 @@ def to_digits(num):
     while num > 0:
         digits.append(num%10)
         num //= 10
-    return reverse_list(digits)
+    digits.reverse()
+    return digits
 
 def to_number(digits):
     """Return a number based on digits"""
-    digits = reverse_list(digits)
+    digits.reverse()
     num = 0
     for i, val in enumerate(digits):
         num += val * 10 ** i
