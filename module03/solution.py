@@ -50,7 +50,7 @@ def prime_number(num):
     """Return true if n is prime number"""
     if num == 2:
         return True
-    for i in range(2, num):
+    for i in range(2, math.ceil(math.sqrt(num)) + 1):
         if num%i == 0:
             return False
     return True
@@ -70,7 +70,9 @@ def fibonacci(num):
     return fibonacci_seq[0:num]
 
 def fib_number(num):
-    """Return a string of Fibonacci sequence to num-th member"""
+    """Return a number formed by concatenating
+    of Fibonacci numbers to num-th member
+    """
     fibonacci_str = "".join(map(str, fibonacci(num)))
     return int(fibonacci_str)
 
