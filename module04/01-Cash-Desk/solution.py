@@ -61,7 +61,6 @@ class CashDesk:
             return
         for bill in money:
             self._addmoney(int(bill), 1)
-        return
 
     def total(self):
         """Return the total money in the desk"""
