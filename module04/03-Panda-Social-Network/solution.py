@@ -7,9 +7,9 @@ class Panda:
         pattern = """
         ^                   # beginning of the string
         \w+                 # any alphanumeric one or more times
-        ([\.-]?\w+)*        # optional dot or slash, then any alphanum zero or more times
+        ([.-]?\w+)*         # optional dot or slash, then any alphanum zero or more times
         @
-        \w+([\.-]?\w+)*     # any alphanum, dot or slash then alphanum zero or more times
+        \w+([.-]?\w+)*      # any alphanum, dot or slash then alphanum zero or more times
         (\.\w{2,})+         # dot folowwed by 2 or more alphanumerics, one or more times
         $                   # end of the string
         """
