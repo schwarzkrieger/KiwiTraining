@@ -38,7 +38,7 @@ class BBCWeatherTests(unittest.TestCase):
             self.assertTrue(image is not None)
             self.assertTrue("%s°C" % temp in day.text)
 
-
+    @unittest.skip("New York is not in task")
     def test_get_weather_10_for_new_york(self):
         self.driver.get('http://www.bbc.com/weather/5128581')
         result = solution.get_weather(self.driver, 10)
