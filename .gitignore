@@ -2,3 +2,4 @@
 .idea/
 *.log
 venv/
+*.sqlite3
